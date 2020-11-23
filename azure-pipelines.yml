@@ -10,7 +10,7 @@ steps:
     scheme: 'HelloiOS'
     configuration: 'Debug'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    useXcpretty: 'false'
+    useXcpretty: false
     args: '-archivePath $(agent.buildDirectory)/HelloiOS'
 
 - task: ArchiveFiles@2
@@ -24,4 +24,3 @@ steps:
     pathToPublish: '$(build.artifactStagingDirectory)/HelloiOS.xcarchive.zip'
     artifactName: 'xcarchive-files'
     artifactType: 'container'
-
